@@ -20,7 +20,7 @@
 			"host": "jcastaneda341.mccweb.net",
 			"port": 21,
 			"user": "jcastaneda341",
-			"password": "FCBarcelona867!",
+			"password": "########",
 			"dir": "/public_html",
 			"baseDir": "/",
 			"transferDataType": "binary"
@@ -31,7 +31,7 @@
 			"host": "jcastaneda341.mccweb.net",
 			"port": 22,
 			"user": "jcastaneda341",
-			"password": "FCBarcelona867!",
+			"password": "########",
 			"dir": "/public_html",
 			"baseDir": "/",
 			"privateKey": null,
