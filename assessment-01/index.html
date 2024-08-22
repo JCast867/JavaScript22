@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment 1 ADD-147</title>
+    <script>
+        function headerFunction() {
+            document.getElementById("start").innerHTML="Changed from a function in the head section"
+        }
+    </script>
+    <script src="scripts/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My favorite wrestlers at the moment</h1>
+    </header>
+
+    <main>
+        <button type = "button" onclick="headerFunction()">Call Function from Head Section</button>
+        <button type = "button" onclick="scriptFunction()">Call Function from External script</button>
+        <p id ="start"></p>
+        <script>
+            document.getElementById("start").innerHTML="JavaScript inside the script tag ;)" 
+        </script>
+        
+
+        <div class = "buttons">
+            <button onclick="document.getElementById('wrestler').src='images/RomanReigns.jpg'">Roman</button>
+            <button onclick="document.getElementById('wrestler').src='images/CMPunk.jpg'">Punk</button>
+            <button onclick="document.getElementById('wrestler').src='images/DrewMcIntyre.jpeg'">Drew</button>
+        </div>
+        <img src="images/RomanReigns.jpg" alt="Roman Reigns" id="wrestler" class="center">
+
+        <div class = "buttons">
+            <button onclick="document.getElementById('wrestler').style.display='block'">show</button>
+            <button onclick="document.getElementById('wrestler').style.display='none'">hide</button>
+        </div>
+
+        
+    </main>
+    
+</body>
+</html>
