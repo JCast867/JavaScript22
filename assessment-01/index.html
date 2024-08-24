@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assessment 1 ADD-147</title>
+    <link rel="stylesheet" href="css/styles.css">
     <script>
         function headerFunction() {
             document.getElementById("start").innerHTML="Changed from a function in the head section"
@@ -19,6 +20,7 @@
     <main>
         <button type = "button" onclick="headerFunction()">Call Function from Head Section</button>
         <button type = "button" onclick="scriptFunction()">Call Function from External script</button>
+
         <p id ="start"></p>
         <script>
             document.getElementById("start").innerHTML="JavaScript inside the script tag ;)" 
@@ -37,8 +39,11 @@
             <button onclick="document.getElementById('wrestler').style.display='none'">hide</button>
         </div>
 
-        
+        <div class = "buttons">
+            <button onclick="changeWidth()">Change the width of the image</button>
+            <button onclick="changeTextColor()">Change the color of the text</button>
+        </div>
+
     </main>
-    
 </body>
 </html>
