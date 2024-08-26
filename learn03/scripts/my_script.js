@@ -3,15 +3,12 @@
 //  local variables are declared wih let
 //  
 var name1 = "Meri";
-
-const taxRate = .07; // This is a constant
 // myName = "Meredith Louise Engel" - Allowed but frowned upon
 
 function names() {
-
     //fix the errors
-    var firstName = "Meredith",
-        lastName = "Engel";
+    var firstName = "Meredith";
+    var lastName = "Engel";
     document.getElementById("name").innerHTML = name1;
     document.getElementById("full-name").innerHTML = firstName + " " + lastName;
     var firstName = "Doctor";
@@ -20,16 +17,20 @@ function names() {
     document.getElementById("nick-name").innerHTML = firstName;
 
 }
-/*
+
 function scope() {
+    let firstName = "Meredith";
+    let lastName = "Engel";
+    const taxRate = .07; // This is a constant
     //fix the errors
-    document.getElementById("global").innerHTML = name;
+    document.getElementById("global").innerHTML = name1;
     document.getElementById("local").innerHtml = firstName;
     document.getElementById("tax").innerHTML = taxRate;
-    taxRate = .08
+    //taxRate = .08
     document.getElementById("new-tax").innerHTML = taxRate;
 }
 
+/*
 function letMe() {
     // Fix the errors
     let dog1 = "Ollie";
