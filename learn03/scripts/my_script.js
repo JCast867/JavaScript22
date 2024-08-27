@@ -43,17 +43,20 @@ function letMe() {
     var dog2 = "Ivy";
     document.getElementById("dog1-2").innerHTML = dog2;
 }
-/*
+
 function constants() {
     // fix the errors
     const PI = 3.14;
     const dogs = ["Ollie", "Nessie", "Ory"];
-    dogs[0] = "Ollie Bear";
-    dogs = ["Shepherd", "Collie", "Bouvier"];
-    document.getElementById("pi").innerHTML = PI;
     document.getElementById("doggos").innerHTML = dogs;
+    dogs[0] = "Ollie Bear";
+    const breed = ["Shepherd", "Collie", "Bouvier"];
+    document.getElementById("new-doggos").innerHTML = dogs;
+    document.getElementById("pi").innerHTML = PI;
+    document.getElementById("breeds").innerHTML = breed;
 }
 
+/*
 function myMath() {
     // create statements demonstrating the use of each operator
 }
