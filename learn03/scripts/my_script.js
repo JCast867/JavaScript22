@@ -87,14 +87,25 @@ function myMath() {
     document.getElementById("decrement").innerHTML = "19-- = " + decrement;
 }
 
-/*
+
 function assignments() {
     // create statements demonstrating the use of each assignment type
     x = 10
-    document.getElementById("equals").innerHTML = "x = 10" + "x = " + x;
-    document.getElementById("plus_equals").innerHTML = "x += 1" + "x = " + x;
+    document.getElementById("equals").innerHTML = "x = 10  =" + " x = " + x;
+    x += 1;
+    document.getElementById("plus-equals").innerHTML = "x += 1 " + "= " + x;
+    x -= 6;
+    document.getElementById("minus-equals").innerHTML = "x -= 6 " + "= " + x;
+    x *= 10;
+    document.getElementById("times-equals").innerHTML = "x *= 10 " + "= " + x;
+    x /= 5;
+    document.getElementById("divide-equals").innerHTML = "x /= 5 " + "= " + x;
+    x %= 8;
+    document.getElementById("modulus-equals").innerHTML = "x %= 8 " + "= " + x;
+
 }
 
+/*
 function dataTypes() {
     // create samples of each of the data types from the
     // index page and display them in the Data Types section
