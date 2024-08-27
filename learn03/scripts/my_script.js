@@ -105,11 +105,16 @@ function assignments() {
 
 }
 
-/*
+
 function dataTypes() {
     // create samples of each of the data types from the
     // index page and display them in the Data Types section
     ;
 
+    const majors = ["Computer Science", "Data Science", "Cybersecurity, Information Technology"];
+    document.getElementById("array").innerHTML = majors;
+
+    const student = {name: "Jaime", age: 21, major: "Computer Science", minor: "Data Science"};
+    document.getElementById("object").innerHTML = student;
+
 }
-*/
