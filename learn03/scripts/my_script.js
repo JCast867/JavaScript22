@@ -56,11 +56,38 @@ function constants() {
     document.getElementById("breeds").innerHTML = breed;
 }
 
-/*
+
 function myMath() {
-    // create statements demonstrating the use of each operator
+    // create statements demonstrating the use of each operator;
+
+    let addition = 10 + 32;
+    document.getElementById("addition").innerHTML = "10 + 32 = " + addition;
+
+    let subtraction = 25 - 11;
+    document.getElementById("subtraction").innerHTML = "25 - 11 = " + subtraction;
+
+    let multiplication = 5 * 8;
+    document.getElementById("multiplication").innerHTML = "5 * 8 = " + multiplication;
+
+    let exponent = 5 ** 2;
+    document.getElementById("exponent").innerHTML = "5^2 = " + exponent;
+
+    let division = 80 / 10;
+    document.getElementById("division").innerHTML = "80 / 10 = " + division;
+
+    let modulus = 11 % 5;
+    document.getElementById("modulus").innerHTML = "11 % 5 = " + modulus;
+
+    let increment = 15;
+    increment++;
+    document.getElementById("increment").innerHTML = "15++ = " + increment;
+
+    let decrement = 19;
+    decrement--;
+    document.getElementById("decrement").innerHTML = "19-- = " + decrement;
 }
 
+/*
 function assignments() {
     // create statements demonstrating the use of each assignment type
     x = 10
