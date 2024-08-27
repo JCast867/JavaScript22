@@ -20,7 +20,6 @@ function names() {
 
 function scope() {
     let firstName = "Meredith";
-    let lastName = "Engel";
     const taxRate = .07; // This is a constant
     //fix the errors
     document.getElementById("global").innerHTML = name1;
@@ -30,19 +29,21 @@ function scope() {
     document.getElementById("new-tax").innerHTML = taxRate;
 }
 
-/*
+
 function letMe() {
     // Fix the errors
     let dog1 = "Ollie";
-    let dog2 = "Nessie";
     dog2 = "Nessie";
+    //dog2 = "Nessie";
     var dog3 = "Paisley";
-    let dog2;
+    var dog2;
     document.getElementById("dog1").innerHTML = dog1;
     document.getElementById("dog2").innerHTML = dog2;
-    document.getElementById("dog1").innerHTML = dog3;
+    document.getElementById("dog3").innerHTML = dog3;
+    var dog2 = "Ivy";
+    document.getElementById("dog1-2").innerHTML = dog2;
 }
-
+/*
 function constants() {
     // fix the errors
     const PI = 3.14;
