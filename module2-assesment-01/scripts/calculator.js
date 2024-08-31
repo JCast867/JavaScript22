@@ -1,15 +1,23 @@
 function getTotal() {
 
+    function validateInput(val) {
+        if (val < 0) {
+            return 0;
+        } else {
+            return val;
+        }
+    }
+
     var totalsSection = document.getElementById("totalsSection");
     totalsSection.style.display = "block";
 
     let name = document.getElementById("name").value;
     // DRINKS
-    let coke = parseInt(document.getElementById("coke").value);
-    let dietcoke = parseInt(document.getElementById("dietcoke").value);
-    let dp = parseInt(document.getElementById("dp").value);
-    let mountdew = parseInt(document.getElementById("mountdew").value);
-    let fanta = parseInt(document.getElementById("fanta").value);
+    let coke = validateInput(parseInt(document.getElementById("coke").value));
+    let dietcoke = validateInput(parseInt(document.getElementById("dietcoke").value));
+    let dp = validateInput(parseInt(document.getElementById("dp").value));
+    let mountdew = validateInput(parseInt(document.getElementById("mountdew").value));
+    let fanta = validateInput(parseInt(document.getElementById("fanta").value));
 
     let drinkTotal = parseFloat(((2.59)*coke + (2.59)*dietcoke + (2.59)*dp + (2.59)*mountdew + (2.59)*fanta).toFixed(2));
     let amountDrinks = coke + dietcoke + dp + mountdew + fanta;
@@ -18,22 +26,22 @@ function getTotal() {
 
 
     // SANDWICHES
-    let chicksand = parseInt(document.getElementById("chicksand").value);
-    let cheesechicksand = parseInt(document.getElementById("cheesechicksand").value);
-    let bacon = parseInt(document.getElementById("bacon").value);
-    let grilledchicken = parseInt(document.getElementById("grilledchicken").value);
-    let cheeseburger = parseInt(document.getElementById("cheeseburger").value);
+    let chicksand = validateInput(parseInt(document.getElementById("chicksand").value));
+    let cheesechicksand = validateInput(parseInt(document.getElementById("cheesechicksand").value));
+    let bacon = validateInput(parseInt(document.getElementById("bacon").value));
+    let grilledchicken = validateInput(parseInt(document.getElementById("grilledchicken").value));
+    let cheeseburger = validateInput(parseInt(document.getElementById("cheeseburger").value));
 
     let wichTotal = parseFloat(((6.29)*chicksand + (7.29)*cheesechicksand + (10.89)*bacon + (9.29)*grilledchicken + (6.59)*cheeseburger).toFixed(2));
     let wichAmount = chicksand + cheesechicksand + bacon + grilledchicken + cheeseburger;
     document.getElementById("wichEstimate").innerHTML = name + ", your sandwich total is " + wichTotal + " with a total amount of " + wichAmount + " sandwiches.";
 
     // DESERTS and SIDES
-    let fries = parseInt(document.getElementById("fries").value);
-    let fruit = parseInt(document.getElementById("fruit").value);
-    let cookie = parseInt(document.getElementById("cookie").value);
-    let brownie = parseInt(document.getElementById("brownie").value);
-    let cookietote = parseInt(document.getElementById("cookietote").value);
+    let fries = validateInput(parseInt(document.getElementById("fries").value));
+    let fruit = validateInput(parseInt(document.getElementById("fruit").value));
+    let cookie = validateInput(parseInt(document.getElementById("cookie").value));
+    let brownie = validateInput(parseInt(document.getElementById("brownie").value));
+    let cookietote = validateInput(parseInt(document.getElementById("cookietote").value));
 
     let desertsidesTotal = parseFloat(((2.50)*fries + (3.00)*fruit + (1.29)*cookie + (2.19)*brownie + (5.39)*cookietote).toFixed(2));
     let desertsidesAmount = fries + fruit + cookie + brownie + cookietote;
