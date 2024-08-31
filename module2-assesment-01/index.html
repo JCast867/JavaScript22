@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 2 - Assesment 1</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src = "calculator.js"></script>
+    <script src = "scripts/calculator.js"></script>
 </head>
 
 <body>
@@ -20,10 +20,73 @@
                 <input type = "text" id = "name" name = "fname"><br>
 
                 <h2>Drinks</h2>
+                <label for = "coke">Coca Cola ($2.59):</label>
+                <input type = "number" id = "coke" name = "soda" value="0"><br>
+
+                <label for = "dietcoke">Diet Coca Cola ($2.59):</label>
+                <input type = "number" id = "dietcoke" name = "soda" value="0"><br>
                 
+                <label for = "dp">Dr. Pepper ($2.59):</label>
+                <input type = "number" id = "dp" name = "soda" value="0"><br>
+                
+                <label for = "mountdew">Mountain Dew ($2.59):</label>
+                <input type = "number" id = "mountdew" name = "soda" value="0"><br>
+                
+                <label for = "fanta">Fanta ($2.59):</label>
+                <input type = "number" id = "fanta" name = "soda" value="0"><br><br><br>
+                
+
+                <h2>Sandwiches</h2>
+                <label for = "chicksand">Chicken Sandwich ($6.29):</label>
+                <input type = "number" id = "chicksand" name = "sandwich" value="0"><br>
+
+                <label for = "cheesechicksand">Chicken Sandwich with Cheese ($7.29):</label>
+                <input type = "number" id = "cheesechicksand" name = "sandwich" value="0"><br>
+                
+                <label for = "bacon">Baconator($10.89):</label>
+                <input type = "number" id = "bacon" name = "sandwich" value="0"><br>
+                
+                <label for = "grilledchicken">Grilled Chicken Sandwich($9.29):</label>
+                <input type = "number" id = "grilledchicken" name = "sandwich" value="0"><br>
+                
+                <label for = "cheeseburger">Cheeseburger($6.59):</label>
+                <input type = "number" id = "cheeseburger" name = "sandwich" value="0"><br><br><br>
+                
+
+                <h2>Deserts and Sides</h2>
+                <label for = "fries">Fries ($2.50):</label>
+                <input type = "number" id = "fries" name = "desertsides" value="0"><br>
+                
+                <label for = "fruit">Fruit Cup ($3.00):</label>
+                <input type = "number" id = "fruit" name = "desertsides" value="0"><br>
+                
+                <label for = "cookie">Cookie ($1.29):</label>
+                <input type = "number" id = "cookie" name = "desertsides" value="0"><br>
+                
+                <label for = "brownie">Brownie ($2.19):</label>
+                <input type = "number" id = "brownie" name = "desertsides" value="0"><br>
+                
+                <label for = "cookietote">Cookie Tote ($5.39):</label>
+                <input type = "number" id = "cookietote" name = "desertsides" value="0"><br><br><br>
+            </div>
+
+            <div class = "bottom">
+                <button type = button onclick = "getTotal()">Get Total!</button>
+                <div id = "totalsSection" style="display: none;">
+                    <h4>Drink Total:</h4>
+                    <p id = "drinkEstimate"></p>
+                    <h4>Sandwich Total:</h4>
+                    <p id = "wichEstimate"></p>
+                    <h4>Deserts and Sides Total:</h4>
+                    <p id = "desertsidesEstimate"></p>
+                    <h3>Total:</h3>
+                    <p id = "total"></p>
+                </div>
             </div>
         </form>
     </main>
-    
+    <footer>
+        <p>Jaime Castaneda</p>
+    </footer>
 </body>
 </html>
