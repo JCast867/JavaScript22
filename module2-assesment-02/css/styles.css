@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -26,7 +26,7 @@ main.Container {
     margin-top: 20px;
 }
 
-#dog1 {
+#dog1, #dog2, #dog3, #dog4, #dog5 {
     text-align: center;
     background-color: white;
     border: 1px solid #ddd;
@@ -36,18 +36,17 @@ main.Container {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#dog1 h2, #dog1 h3 {
+#dog1 h2, #dog2 h2, #dog3 h2, #dog4 h2, #dog5 h2, #dog1 h3, #dog2 h3, #dog3 h3, #dog4 h3, #dog5 h3 {
     margin: 10px 0;
 }
 
-#dog1 img {
+#dog1 img, #dog2 img, #dog3 img, #dog4 img, #dog5 img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
-/* Add hover effects */
-#dog1:hover {
+#dog1:hover, #dog2:hover, #dog3:hover, #dog4:hover, #dog5:hover {
     background-color: #f9f9f9;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
