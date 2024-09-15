@@ -9,6 +9,7 @@ let letters = answer.split('');
 let attemptsLeft = 6;
 let output = '';
 let userLetter = '';
+let found = false;
 // game setup works fine --steffen
 function setup() {
     alert(answer);
@@ -35,25 +36,30 @@ document.getElementById("submit").addEventListener("click", function(event){
 
     for (let c = 0; c < answer.length; c++) {
         //alert(letters[c]);
+        let found = false;
         if (userLetter.toUpperCase() == letters[c]) {
             display[c] = userLetter.toUpperCase();
             win--;
-        }
-
+            found = true;
+        } 
         output = output + display[c] + ' ';
+    }
+    if (found == false) {
+        attemptsLeft--;
+    }
+    if (win < 1) {
+            document.getElementById("guesses").innerHTML = 'YOU WIN!!!';
+    } else if (attemptsLeft < 1) {
+            document.getElementById("guesses").innerHTML = 'YOU LOSE!!!';
+    } else {
+            document.getElementById("guesses").innerHTML = 'You have ' + attemptsLeft + ' guesses left';
     }
     
     document.getElementById("word").innerHTML = output;
     output = '';
-    attemptsLeft--;
+    //attemptsLeft--;
 
-    if (win < 1) {
-        document.getElementById("guesses").innerHTML = 'YOU WIN!!!';
-    } else if (attemptsLeft < 1) {
-        document.getElementById("guesses") = 'YOU LOSE!!!';
-    } else {
-        document.getElementById("guesses").innerHTML = 'You have ' + attemptsLeft + ' guesses left';
-    }
+    
 });
 
 
