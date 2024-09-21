@@ -1,6 +1,6 @@
 // declare and initialize array
-let game = ["COBOL", "JAVA", "PYTHON", "JAVASCRIPT"];
-let choice = Math.floor(Math.random() * 4);
+let game = ["DEPAU", "LOYOLA", "BROWN", "HARVARD", "ELMHURST", "AURORA", "ROOSEVELT", "AMHERST", "HAMILTON", "SMITH"];
+let choice = Math.floor(Math.random() * game.length);
 let answer = game[choice];
 let myLength = answer.length;
 let display = [myLength];
@@ -9,10 +9,11 @@ let letters = answer.split('');
 let attemptsLeft = 6;
 let output = '';
 let userLetter = '';
-let found = false;
-// game setup works fine --steffen
+let usedLetters = []; // array to store guessed letters
+
+// game setup
 function setup() {
-    alert(answer);
+    //alert(answer); 
     for (let i = 0; i < answer.length; i++) {
         display[i] = "_ ";
         output = output + display[i];
@@ -20,47 +21,48 @@ function setup() {
     document.getElementById("word").innerHTML = output;
 }
 
-
-
-
-// Issue below here
-// noticed if we uncomment below it reveals all letter for the hangman
-
-
-document.getElementById("submit").addEventListener("click", function(event){
-
+// function for handling the letter guesses
+document.getElementById("submit").addEventListener("click", function(event) {
     event.preventDefault();
     output = '';
-    userLetter = document.getElementById("guess").value;
-    document.getElementById("guess").value = ''; //would this reset value to null
+    userLetter = document.getElementById("guess").value.toUpperCase();
+    document.getElementById("guess").value = '';
 
-    for (let c = 0; c < answer.length; c++) {
-        //alert(letters[c]);
-        let found = false;
-        if (userLetter.toUpperCase() == letters[c]) {
-            display[c] = userLetter.toUpperCase();
-            win--;
-            found = true;
-        } 
-        output = output + display[c] + ' ';
-    }
-    if (found == false) {
-        attemptsLeft--;
-    }
-    if (win < 1) {
+    // check if the letter has already been guessed
+    if (!usedLetters.includes(userLetter)) {
+        usedLetters.push(userLetter); // add guessed letter to usedLetters array
+        document.getElementById("guessed").innerHTML = 'Guessed letters: ' + usedLetters.join(', ');
+
+        let found = false; // rrack if the letter was found
+
+        // loop through the letters of the word
+        for (let c = 0; c < answer.length; c++) {
+            if (userLetter == letters[c]) {
+                if (display[c] == "_ ") {
+                    display[c] = userLetter;
+                    win--;
+                }
+                found = true;
+            }
+            output = output + display[c] + ' ';
+        }
+
+        if (!found) {
+            attemptsLeft--;
+            document.getElementById("hangman").src = "images/0" + (7 - attemptsLeft) + ".png"; // Update hangman image
+        }
+
+        if (win < 1) {
             document.getElementById("guesses").innerHTML = 'YOU WIN!!!';
-    } else if (attemptsLeft < 1) {
+        } else if (attemptsLeft < 1) {
             document.getElementById("guesses").innerHTML = 'YOU LOSE!!!';
-    } else {
+        } else {
             document.getElementById("guesses").innerHTML = 'You have ' + attemptsLeft + ' guesses left';
+        }
+
+        document.getElementById("word").innerHTML = output;
+        output = '';
+    } else {
+        alert('You already guessed that letter!');
     }
-    
-    document.getElementById("word").innerHTML = output;
-    output = '';
-    //attemptsLeft--;
-
-    
 });
-
-
-//scirpt connected fine somereason the button and the script are not registering.
