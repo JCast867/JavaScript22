@@ -1,0 +1,7 @@
+I want to make the dashboard page of a finance app where you enter your name, bank balance, deposit, withdraw, and then exit out.
+The reason I want to do this project is because for my university class at DePaul, I'm in a group where we're making a 
+project like that. So what better way to kill two birds with one stone. It'll give me more time to work on my page and make
+it look the best way possible with JavaScript in it. For my project at DePaul, I'm going to have more pages but those are
+using Python/Django and it'll be too complicated. So, I only want to focus on the dashboard page for this project.
+The only down side is that the user will have to manually enter the values themselves. But, it will be calculated by the
+application itself.
