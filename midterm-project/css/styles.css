@@ -1,0 +1,10 @@
+.dropdown-menu .btn-logout {
+    width: 100%;
+    text-align: left;
+    padding: 0.25rem 1.5rem;
+    border: none;
+    background: none;
+}
+.dropdown-menu .btn-logout:hover {
+    background-color: #f8d7da; /* Optional: Add a hover effect */
+}
