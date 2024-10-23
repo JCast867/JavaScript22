@@ -8,3 +8,7 @@
 .dropdown-menu .btn-logout:hover {
     background-color: #f8d7da;
 }
+
+.padded-body {
+    padding-top: 56px;
+  }
