@@ -1,54 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import restaurant from "./restaurant.jpg";
 
-function Header(props) {
-  return (
-    <header>
-      <h1>{props.name}'s Kitchen</h1>
-    </header>
-  )
+
+function TrueComponent() {
+  return <h1>Most of the world is righty</h1>;
 }
 
-function Main(props) {
-  return (
-    <section>
-      <p>We serve the most {props.adjective} around</p>
-      <img src={restaurant} height={400} alt="Mexican Food"/>
-      <ul style={{textAlign: 'left'}}>
-        {props.dishes.map((dish) => (
-          <li key={dish.id}>{dish.title}</li>
-          ))}
-      </ul>
-    </section>
-  )
+function FalseComponent() {
+  return <h1>Everyone in the world is blind and deaf</h1>;
 }
 
-function Footer(props) {
+
+function App({authorized}) {
+  const [settings, setSettings] = useState("Cruising");
+
+  
   return (
-    <footer>
-      <p>Copyright {props.year}</p>
-    </footer>
+    <>
+    {authorized ? <TrueComponent /> : <FalseComponent />}
+    <br></br><br></br><br></br><br></br>
+
+
+    <h1>The current car settings is set to {settings}</h1>
+    <button onClick={() => setSettings("Cruising")}>Crusing</button>
+    <button onClick={() => setSettings("Accelerating")}>Accelerating</button>
+    <button onClick={() => setSettings("Braking")}>Braking</button>
+    </>
   )
-}
-
-const dishes = [
-  "Enchiladas",
-  "Tacos",
-  "Empanadas",
-  "Tortas"
-];
-
-const dishesObjects = dishes.map((dish, i) => ({id: i, title: dish}))
-
-function App() {
-  return (
-    <div className="App">
-      <Header name="Jaime" />
-      <Main adjective="amazing" dishes={dishesObjects} />
-      <Footer year={new Date().getFullYear()} />
-    </div>
-  );
+  
 }
 
 export default App;
