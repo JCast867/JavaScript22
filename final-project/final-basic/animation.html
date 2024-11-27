@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Final Project</title>
-    <!-- Bootswatch CSS -->
+    <title>Animation</title>
     <link
       rel="stylesheet"
       href="https://bootswatch.com/5/zephyr/bootstrap.min.css"
@@ -67,30 +66,28 @@
     </nav>
 
     <div class="container mt-5">
-      <h2 class="text-center mb-4">Final Project</h2>
-      <h4 class="text-start mb-4">JSON to HTML</h4>
-      <div class="card shadow-sm mt-4 mb-4">
-        <div class="card-header bg-info text-white">
-          <h5 class="mb-0">My Favorite Shows Recently</h5>
-        </div>
-        <div class="card-body">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Main Character</th>
-                <th>Network</th>
-                <th class="text-end">Start Date</th>
-              </tr>
-            </thead>
-            <tbody id="shows-table-body"></tbody>
-          </table>
-        </div>
+      <h1 class="text-center mb-4">jQuery Animation</h1>
+
+      <section>
+        <h2>Sliding Div Animation</h2>
+        <p>This section shows the sliding div using JQuery</p>
+      </section>
+
+      <div class="text-center mb-4">
+        <button id="animateButton" class="btn btn-primary">
+          Start Animation
+        </button>
+      </div>
+
+      <div id="animatedDiv" class="mt-5">
+        <h2>Welcome!</h2>
+        <p>Time to slideeeee</p>
+        <img src="images/photo.jpeg" alt="Small Image" />
       </div>
     </div>
 
-    <script src="scripts/jquery.js"></script>
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="scripts/animation.js"></script>
   </body>
 </html>

@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Final Project</title>
-    <!-- Bootswatch CSS -->
+    <title>JQuery Ajax</title>
     <link
       rel="stylesheet"
       href="https://bootswatch.com/5/zephyr/bootstrap.min.css"
@@ -67,30 +66,18 @@
     </nav>
 
     <div class="container mt-5">
-      <h2 class="text-center mb-4">Final Project</h2>
-      <h4 class="text-start mb-4">JSON to HTML</h4>
-      <div class="card shadow-sm mt-4 mb-4">
-        <div class="card-header bg-info text-white">
-          <h5 class="mb-0">My Favorite Shows Recently</h5>
-        </div>
-        <div class="card-body">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Main Character</th>
-                <th>Network</th>
-                <th class="text-end">Start Date</th>
-              </tr>
-            </thead>
-            <tbody id="shows-table-body"></tbody>
-          </table>
-        </div>
+      <h2 class="text-center mb-4">jQuery AJAX</h2>
+
+      <div id="div1" class="text-center mb-4">
+        <h2>jQuery AJAX will change this with one click!</h2>
+      </div>
+
+      <div class="text-center mb-4">
+        <button class="btn btn-primary">Change!</button>
       </div>
     </div>
 
-    <script src="scripts/jquery.js"></script>
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/ajax.js"></script>
   </body>
 </html>

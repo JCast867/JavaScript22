@@ -1,0 +1,2 @@
+<h2>Demonstrating jQuery and AJAX!</h2>
+<p>Voilà!</p>
