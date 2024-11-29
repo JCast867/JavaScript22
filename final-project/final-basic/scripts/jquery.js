@@ -35,6 +35,9 @@ let shows = [
   },
 ];
 
+const showsJSON = JSON.stringify(shows);
+document.getElementById("shows").innerHTML = showsJSON;
+
 function populateTable(showsArray) {
   const tableBody = document.getElementById("shows-table-body");
 
